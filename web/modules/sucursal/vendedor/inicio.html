@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SICEFA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../../style/bootstrap-5.3.0-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style_sucursalVendedor/style_sucursalVendedor.css" rel="stylesheet">
+        <link href="../../../style/sweetalert2.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="../../../img/logo.png" width=80 height="80">
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="inicio.html" class="d-flex align-items-center">Inicio</a></li>  
+                    <li><a onclick="vendedorProducto()" class="d-flex align-items-center">Producto</a></li> 
+                    <li><a onclick="vendedorPedido()" class="d-flex align-items-center">Pedido</a></li> 
+                    <li><a onclick="vendedorCliente()" class="d-flex align-items-center">Cliente</a></li> 
+                    <li><a onclick="vendedorVenta()" class="d-flex align-items-center">Venta</a></li> 
+                </ul>
+            </nav>
+            <div class="login d-flex align-items-center" >
+                <a href="../../../index.html">
+                    <button type="button" class="btn btn-primary">
+                        <img src="../../../img/user.png" class="m-2">
+                        Cerrar Sesión
+                    </button>
+                </a>
+            </div>
+        </header>
+
+
+        <div class="content p-5" id="contenidoVendedor">
+            <div class="s11">
+                <img src="../../../img/User_icon_2.svg.png" width="400px"/>
+                <button class="btn" disabled>Vendedor</button> 
+            </div>
+
+            <div class="s12 ">
+                <div class="container-fluid col-6">
+                    <label>Nombre(s)</label><br>
+                    <input class="container-fluid bg-secondary-subtle rounded-2" type="text" id="txtNombre" name="txtnombre" disabled value="Maria del Rosario">
+                </div>
+                <div class="container-fluid col-6">
+                    <label>Apellido(s)</label><br>
+                    <input class="container-fluid bg-secondary-subtle rounded-2" type="text" id="txtApellido" name="txtApellido" disabled value="Beltran Aranda">
+                </div>
+                <div class="container-fluid col-12">
+                    <label>Código</label><br>
+                    <input class="container-fluid bg-secondary-subtle rounded-2" type="text" id="txtCodigo" name="txtCodigo" disabled value="7">
+                </div>
+                <div class="container-fluid col-12">
+                    <label>CURP</label><br>
+                    <input class="container-fluid bg-secondary-subtle rounded-2" type="text" id="txtCURP" name="txtCURP" disabled value="BEAM001109MGTLRRQ2">
+                </div>
+                <div class="container-fluid col-6">
+                    <label>Fecha de registro</label><br>
+                    <input class="container-fluid bg-secondary-subtle rounded-2" type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" disabled value="05/12/2018">
+                </div>
+                <div class="container-fluid col-3">
+                    <label>Sucursal</label><br>
+                    <input class="container-fluid bg-secondary-subtle rounded-2" type="text" id="SISEFA" name="SISEFA" placeholder="Central" disabled value="Centro">
+                    <div class="container-fluid col-3"></div>
+                </div>
+                <div class="container-fluid col-3"></div>
+            </div>
+
+
+        </div>
+
+        <div class="clearfix">
+
+        </div>
+
+        <footer>
+            <p>&#169Copyright 2023 Medicamos tu Vida S.A. | Aviso Legal | Aviso de privacidad TEL 477 123 45 67</p>
+        </footer>
+
+        <script src="appvendedor.js"></script>
+        <script src="../../../style/sweetalert2.all.min.js"></script>
+    </body>
+</html>

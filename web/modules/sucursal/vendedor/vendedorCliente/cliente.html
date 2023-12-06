@@ -1,0 +1,97 @@
+<div class="content">
+
+    <div class="s13 justify-content-center">
+        <h3 class="col-12 d-flex justify-content-center p-4">Gestión de Clientes</h3>
+        <div class="container-fluid col-5 mt-4">
+            <label>Nombre:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtNombre" name="txtnombre" >
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>Apellidos Paterno:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtApellidoP" name="txtApellidoP" >
+        </div>
+        <div class="container-fluid col-5 mt-4">
+            <label>Apellidos Materno:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtApellidoM" name="txtApellidoM" >
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>Género:</label><br>
+            <select required id="genero" class="container-fluid rounded-2 " >
+                <option value disabled selected>Seleccionar</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="Otro">Otro</option>
+
+            </select>
+        </div>
+        <div class="container-fluid col-5 mt-4">
+            <label>RFC:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtRFC" name="txtRFC" >
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>CURP:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtCURP" name="txtCURP" >
+        </div>
+        <div class="container-fluid col-5 mt-4">
+            <label>Dirección:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="direccion" name="txtDireccion" disabled>
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>Código Postal:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="CPostal" name="CPostal">
+        </div>
+        <div class="container-fluid col-5 mt-4">
+            <label>Ciudad:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtCiudad" name="txtCiudad">
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>Estado:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtEstado" name="txtEstado">
+        </div>
+        <div class="container-fluid col-5 mt-4">
+            <label>Fecha de nacimieto:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtBirth" name="txtBirth" placeholder="DD/MM/YYYY" >
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>Fecha de registro:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="txtFecha" name="txtFecha" placeholder="DD/MM/YYYY" >
+        </div>
+        <div class="container-fluid col-5 mt-4">
+            <label>Teléfono:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="tel" name="txtTelefono" disabled>
+        </div>
+        <div class="container-fluid col-6 mt-4">
+            <label>Correo electrónico:</label><br>
+            <input class="container-fluid rounded-2" type="text" id="corr" name="CPostal" disabled>
+        </div>
+        <div>
+            <input class="container-fluid rounded-2" type="hidden" id="status" name="CPostal" disabled>
+        </div>
+    </div>
+
+    <div class="s14">
+        <div class="col-12 d-flex justify-content-center ">
+            <input type="search" id="pedidoBuscar" placeholder="Buscar Sucursal"  class="col-4" >
+        </div>
+
+        <div class="table-responsive d-flex justify-content-center align-content-center pt-4">
+            <table class="table-bordered container-fluid">
+                <thead class="text-white text-center">
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Teléfono</th>
+                <th>RFC</th>
+                <th>Estatus</th>
+                </thead>
+                <tbody class="text-center" id="tblPedidoVendedor">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="imprimir d-flex justify-content-end ">
+            <button class="btn btn-primary m-3 " id="btnBuscar">Imprimir reporte</button>
+        </div>
+    </div>
+</div>
+<<script src="vendedorCliente.js"></script>>

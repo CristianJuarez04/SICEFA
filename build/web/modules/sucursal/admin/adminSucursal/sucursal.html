@@ -1,0 +1,29 @@
+<div class="content col-12 justify-content-center">
+
+    <div class="s16 col-12">
+        <h3 class="col-12 d-flex justify-content-center p-4">Gestión de Sucursal</h3>
+        <div class="col-12 d-flex justify-content-center ">
+            <input id="buscarSucursal" type="search" placeholder="Buscar sucursal" class="col-4" >
+            <button class="btn btn-primary m-3" onclick="moduloLogin1.searchSucursal()" id="btnBuscar">Buscar</button>
+        </div>
+
+        <div class="table-responsive d-flex justify-content-center align-content-center pt-4">
+            <table class="table-bordered container-fluid">
+                <thead class="text-white text-center">
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Titular</th>
+                <th>Domicilio</th>
+                <th>Telefono</th>
+                <th>Estatus</th>
+                </thead>
+                <tbody id ="tblSucursales" class="text-center">
+                </tbody>
+            </table>
+        </div>
+        <div class="imprimir d-flex justify-content-end ">
+            <button class="btn btn-primary m-3 ">Imprimir reporte</button>
+        </div>
+    </div>
+    <script src="adminSucursal.js"></script>
+</div>

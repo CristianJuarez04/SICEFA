@@ -1,0 +1,104 @@
+<div class="justify-content-center container-fluid">
+    <div class="row">
+        <div class="col-12"><br>
+            <h3 class="col-12 d-flex justify-content-center">Gestión de Clientes</h3>
+            <div class="row d-flex align-items-center" style="border: solid 1px; border-radius: 1em; padding-top: 1%; padding-bottom: 1%">
+                <div class="col-4">
+                    <label>Nombre:</label><br>
+                    <input class="form-control" type="text" id="txtNombre" name="txtNombre" >
+                </div>
+                <div class="col-4">
+                    <label>Apellidos Paterno:</label><br>
+                    <input class="form-control" type="text" id="txtApellidoP" name="txtApellidoP" >
+                </div>
+                <div class="col-4">
+                    <label>Apellidos Materno:</label><br>
+                    <input class="form-control" type="text" id="txtApellidoM" name="txtApellidoM" >
+                </div>
+                <div class="col-4">
+                    <label>Género:</label><br>
+                    <select required id="genero" class="form-control">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>RFC:</label><br>
+                    <input class="form-control" type="text" id="txtRFC" name="txtRFC" >
+                </div>
+                <div class="col-4">
+                    <label>CURP:</label><br>
+                    <input class="form-control" type="text" id="txtCURP" name="txtCURP" >
+                </div>
+                <div class="col-4">
+                    <label>Domicilio:</label><br>
+                    <input class="form-control" type="text" id="txtDomicilio" name="txtDomicilio">
+                </div>
+                <div class="col-4">
+                    <label>Código Postal:</label><br>
+                    <input class="form-control" type="text" id="txtCPostal" name="txtCPostal">
+                </div>
+                <div class="col-4">
+                    <label>Ciudad:</label><br>
+                    <input class="form-control" type="text" id="txtCiudad" name="txtCiudad">
+                </div>
+                <div class="col-4">
+                    <label>Estado:</label><br>
+                    <input class="form-control" type="text" id="txtEstado" name="txtEstado">
+                </div>
+                <div class="col-4">
+                    <label>Fecha de nacimieto:</label><br>
+                    <input class="form-control" type="date" id="txtBirth" name="txtBirth">
+                </div>
+                <div class="col-4">
+                    <label>Teléfono:</label><br>
+                    <input class="form-control" type="text" id="txtTelefono" name="txtTelefono">
+                </div>
+                <div class="col-4">
+                    <label>Correo electrónico:</label><br>
+                    <input class="form-control" type="text" id="txtEmail" name="txtEmail" >
+                </div>
+                <div class="col-4">
+                    <label>Código de cliente:</label><br>
+                    <input class="form-control" type="text" id="txtIdCliente" name="txtIdCliente" disabled>
+                </div>
+            </div>
+            <div class="col-8">
+                <button class="btn btn-success m-3" id="btnAgregar">Registrar</button>
+                <button class="btn btn-warning m-3" id="btnActualizar" onclick="updateCliente()">Actualizar</button>
+                <button class="btn btn-secondary m-3" id="btnLimpiar" onclick="clean()">Limpiar</button>
+                <button class="btn btn-danger m-3" id="btnEliminar" onclick="eliminarCliente()">Eliminar</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="d-flex justify-content-center">
+                <input type="search" id="clienteBuscar" placeholder="Buscar Cliente"  class="col-12" >
+            </div><br>
+
+            <div class=" table table-responsive justify-content-center align-content-center">
+                <div style="margin-bottom: 2px; max-height: 20em; min-height: 20em;">
+                    <table class="table table-sm table-hover">
+                        <thead class="table-responsive text-center" style="position: sticky; top: 0; z-index: 1; border-bottom: 2px solid #000;">
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Teléfono</th>
+                                <th>RFC</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center" id="tblCliente">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="imprimir d-flex justify-content-end ">
+                <button class="btn btn-primary m-3 " id="btnBuscar">Imprimir reporte</button>
+            </div>
+        </div>
+    </div>
+</div>

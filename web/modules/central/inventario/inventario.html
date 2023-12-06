@@ -1,0 +1,35 @@
+  <div>
+
+            <div class="s16     ">
+                <h3 class="col-12 p-4 ">Inventario</h3>
+                <div class="col-12 d-flex ">
+                    <input type="search" id="productoBuscar" placeholder="Buscar Sucursal"  class="col-4" >
+                </div>
+
+                <div class="table-responsive d-flex justify-content-center align-content-center pt-4">
+                    <table class="table-bordered container-fluid">
+                        <thead class="text-white text-center">
+                        <th>Nombre genérico</th>
+                        <th>Forma farmacéutica</th>
+                        <th>Unidad de medida</th>
+                        <th>Presentación</th>
+                        <th>Principal indicación</th>
+                        <th>Contraindicaciónes</th>
+                        <th>Concentración</th>
+                        <th>Unidades en envase</th>
+                        <th>Precio unitario</th>
+                        <th>Ruta de la foto</th>
+                        <th>Estado</th>
+                        <th>Código de barras</th>
+                        </thead>
+                        <tbody class="text-center" id="tblInventario">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="imprimir d-flex justify-content-end ">
+                    <button class="btn btn-primary m-3 " id="btnBuscar" onclick="moduloLogin1.searchProducto()">Imprimir reporte</button>
+                </div>
+            </div>
+        </div>
+<script src="controllerInventario.js"></script>

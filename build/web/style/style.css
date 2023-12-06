@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+}
+
+.header{
+    background-color: #009cff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+    padding-right: 20px;
+}
+
+.header .logo img{
+    height: 90px;
+    width: auto;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    margin: 0;
+}
+
+.header .nav-links a:hover{
+    color: #000099;
+    background-color: #BDDAFC;
+}
+
+.header .nav-links a{
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-weight: bold ;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.header .login{
+    margin-left: auto;
+}
+
+.login a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.login img{
+    width: 60px;
+    padding: 5px;
+}
+
+.login a:hover{
+    color: #000099;
+}
+
+
+
+.titulo{
+    height: 700px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.titulo h1{
+    color: #0000ff;
+    font-size: 89px;
+    font-weight: bold;
+}
+
+.titulo h5{
+    color: #ff0000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.titulo h3{
+    color: #0000ff;
+    font-size: 63px;
+}
+
+
+
+.contenido{
+    border-top: darkgray 1px solid;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 100px;
+    padding-left: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido .titulo1{
+    display: flex;
+    justify-content: center;
+    color: #FF6666;
+    font-weight: bold;
+}
+
+.contenido .titulo2{
+    display: flex;
+    justify-content: center;
+    color: #0D2E54;
+    font-weight: bold;
+}
+
+.d-flex{
+    align-content: center;
+    justify-content: center;
+}
+
+h4{
+    color: #0000ff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.contimg{
+    border-radius: 50%;
+    width: 250px;
+    height: 210px;
+}
+
+
+
+footer{
+    background-color: #009cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-right: 20px;
+}
+
+.welcome{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+}
+
+.logbody{
+    background-color: #45ADCC;
+    width: 70%;
+    height: auto;
+    justify-content: center;
+}
+
+.contra a{
+    text-decoration: none;
+    color: #0D2E54;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.contra a:hover{
+    color: white;
+}

@@ -1,0 +1,110 @@
+<div class="s15 justify-content-center container-fluid">
+    <div class="row">
+        <div class="col-12"><br>
+            <h3 class="col-12 p-4 ">Gestión de Productos</h3>
+            <div class="d-flex flex-lg-wrap ">
+                <div class="mt-4 col-2 label">
+                    <label>ID producto:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="ID" disabled>
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Nombre:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtNombre" name="txtNGenerico">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Nombre genérico:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtNGenerico" name="txtNombre">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Forma farmaceutica:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtForma" name="txtForma">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Unidad de medida:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtUMedida" name="txtUMedida">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Principal indicación:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtAplicacion" name="txtAplicacion">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Presentación:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtPresentacion" name="txtPresentacion">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Contraindicaciones:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtContraindicaciones" name="txtContraindicaciones">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Concentración:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="txtConcentracion" name="txtConcentracion">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Unidades en envase:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="uEnvase" name="uEnvase">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Precio venta:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="pUnitario" name="pUnitario">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Precio compra:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="pCompra" name="pUnitario">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Ruta de la foto:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="foto" name="foto">
+                </div>
+                <div class="mt-4 col-2 label">
+                    <label>Código en barras:</label><br>
+                    <input class="container-fluid rounded-2" type="text" id="cBarras" name="cBarras"><br>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex ">
+                <button class="btn btn-success m-3" id="btnAgregarP" onclick="insertarProducto()">Registrar</button>
+                <button class="btn btn-warning m-3" id="btnActualizarP" onclick="actualizarProducto()">Actualizar</button>
+                <button class="btn btn-secondary m-3" id="btnLimpiarP" onclick=" limpiarCampos()">Limpiar</button>
+                <button class="btn btn-danger m-3" id="btnEliminarP" onclick="borrarProducto()">Eliminar</button>
+            </div>
+        </div>
+
+       <div class="col-12">
+            <div class="d-flex justify-content-center">
+                <input type="search" id="buscarProducto" placeholder="Buscar Producto" class="form-control-lg">
+            </div><br>
+
+
+            <div class=" table table-responsive justify-content-center align-content-center">
+                <div style="margin-bottom: 2px; max-height: 20em; min-height: 20em;">
+                    <table class="table table-sm table-hover">
+                        <thead class="table-responsive text-center" style="position: sticky; top: 0; z-index: 1; border-bottom: 2px solid #000;">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Nombre genérico</th>
+                                <th>Forma farmacéutica</th>
+                                <th>Unidad de medida</th>
+                                <th>Presentación</th>
+                                <th>Principal indicación</th>
+                                <th>Contraindicaciónes</th>
+                                <th>Concentración</th>
+                                <th>Unidades en envase</th>
+                                <th>Precio Venta</th>
+                                <th>Estado</th>
+                                <th>Código de barras</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblProductos" class="text-center table-group-divider">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="imprimir d-flex justify-content-end">
+                <button class="btn btn-primary m-3 " id="btnBuscar" onclick="moduloLogin1.searchProducto()">Imprimir reporte</button>
+            </div>
+        </div>
+    </div>
+</div>

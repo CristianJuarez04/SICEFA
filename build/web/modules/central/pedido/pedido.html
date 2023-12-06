@@ -1,0 +1,29 @@
+<div class="content col-12 justify-content-center">
+    <div class="s16 col-12">
+        <h3 class="col-12">Gestión de Pedidos</h3>
+        <div class="col-12 d-flex justify-content-center">
+            <input type="search" id="pedidoBuscar" placeholder="Buscar Pedido"  class="col-4" >
+        </div>
+
+        <div class="table-responsive d-flex justify-content-center align-content-center pt-4">
+            <table class="table-bordered container-fluid">
+                <thead class="text-white text-center">
+                <th>No. Pedido</th>
+                <th>Empleado</th>
+                <th>Productos</th>
+                <th>Cantidad</th>
+                <th>IVA</th>
+                <th>Total</th>
+                <th>Estatus</th>
+                </thead>
+                <tbody class="text-center" id="tblPedidoVendedor">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="imprimir d-flex justify-content-end ">
+            <button class="btn btn-primary m-3 " id="btnBuscar" onclick="moduloLogin1.searchProducto()">Imprimir reporte</button>
+        </div>
+    </div>
+</div>
+<script src="controllerPedido.js"></script>>

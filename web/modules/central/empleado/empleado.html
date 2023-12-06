@@ -1,0 +1,135 @@
+<div class="s13 justify-content-center container-fluid">
+    <div class="row">
+        <div class="col-12"><br>
+            <h3 class="col-12 d-flex justify-content-center">Gestión de Empleados</h3><br>
+            <div class="row d-flex align-items-center" style="border: solid 1px; border-radius: 1em; padding-top: 1%; padding-bottom: 1%">
+                <h4>Datos Personales</h4>
+                <div class="col-4">
+                    <label>Código:</label><br>
+                    <input class="form-control" type="text" id="txtCodigo" name="txtcodigo" disabled>
+                </div>
+                <div class="col-4">
+                    <label>Nombre(s):</label><br>
+                    <input class="form-control" type="text" id="txtNombre" name="txtnombre" >
+                </div>
+                <div class="col-4">
+                    <label>Apellido Paterno:</label><br>
+                    <input class="form-control" type="text" id="txtApellidoPaterno" name="txtApellidoPaterno" >
+                </div><br>
+                <div class="col-4">
+                    <label>Apellido Materno:</label><br>
+                    <input class="form-control" type="text" id="txtApellidoMaterno" name="txtApellidoMaterno" >
+                </div>
+                <div class="col-4">
+                    <label>Fecha de nacimiento:</label><br>
+                    <input class="form-control" type="date" id="dateBirth" name="dateBirth" >
+                </div>
+                <div class="col-4">
+                    <label>CURP:</label><br>
+                    <input class="form-control" type="text" id="txtCURP" name="txtCURP" >
+                </div><br>
+                <div class="col-4">
+                    <label>Género:</label><br>
+                    <select required id="txtGenero" class="form-control">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Teléfono:</label><br>
+                    <input class="form-control" type="tel" id="txtTelefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                </div>
+                <div class="col-4">
+                    <label>Foto:</label><br>
+                    <input class="form-control" type="file" id="txtFoto" name="txtFoto" >
+                </div>
+            </div><br>
+            <div class="row d-flex align-items-center" style="border: solid 1px; border-radius: 1em; padding-top: 1%; padding-bottom: 1%">
+                <h4>Domicilio</h4>
+                <div class="col-4">
+                    <label>Dirección:</label><br>
+                    <input class="form-control" type="text" id="txtDireccion" name="txtDireccion" >
+                </div>
+                <div class="col-4">
+                    <label>Código Postal:</label><br>
+                    <input class="form-control" type="text" id="txtCodigoPostal" name="txtCodigoPostal" >
+                </div>
+                <div class="col-4">
+                    <label>Ciudad:</label><br>
+                    <input class="form-control" type="text" id="txtCiudad" name="txtCiudad" >
+                </div><br>
+                <div class="col-4">
+                    <label>Estado:</label><br>
+                    <input class="form-control" type="text" id="txtEstado" name="txtEstado" >
+                </div>
+            </div><br>
+            <div class="row d-flex align-items-center" style="border: solid 1px; border-radius: 1em; padding-top: 1%; padding-bottom: 1%">
+                <h4>Datos de empleo</h4>
+                <div class="col-4">
+                    <label>Puesto:</label><br>
+                    <select required id="txtPuesto" class="form-control">
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Rol:</label><br>
+                    <select required id="txtRol" class="form-control">
+                        <option value="ADMC">Administrador del Sistema Central</option>
+                        <option value="ADMS">Administrador de Sucursal</option>
+                        <option value="EMPS">Empleado de Sucursal</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label>Sucursal:</label><br>
+                    <select required id="txtSucursal" class="form-control"></select>
+                </div><br>
+                <div class="col-4">
+                    <label>RFC:</label><br>
+                    <input class="form-control" type="text" id="txtRFC" name="txtRFC" >
+                </div>
+                <div class="col-4">
+                    <label>Salario Bruto:</label><br>
+                    <input class="form-control" type="number" id="txtSalario" name="txtSalario" >
+                </div>
+            </div>
+
+            <div class="col-8">
+                <button class="btn btn-success m-3" id="btnAdd">Registrar</button>
+                <button class="btn btn-warning m-3" onclick="updateEmpleado()" id="btnUpdate">Actualizar</button>
+                <button class="btn btn-secondary m-3" onclick="clean()" id="btnClean">Limpiar</button>
+                <button class="btn btn-danger m-3" onclick="deleteEmpleado()" id="btnDelete">Eliminar</button>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="d-flex justify-content-center">
+                <input  type="search" id="buscarEmpleado" placeholder="Buscar empleado" class="form-control-lg">
+            </div><br>
+
+            <div class=" table table-responsive justify-content-center align-content-center">
+                <div style="margin-bottom: 2px; max-height: 20em; min-height: 20em;">
+                    <table class="table table-sm table-hover">
+                        <thead class="table-responsive text-center" style="position: sticky; top: 0; z-index: 1; border-bottom: 2px solid #000;">
+                            <tr>
+                                <th scope="col">Código</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Sucursal</th>
+                                <th scope="col">Puesto</th>
+                                <th scope="col">Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblEmpleados" class="text-center table-group-divider">
+                            <!-- Los datos de los empleados se insertarán aquí dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div><br>
+            <div class="imprimir d-flex justify-content-end" style="margin-bottom: 1%">
+                <button class="btn btn-primary">Imprimir reporte</button>
+            </div>
+        </div>
+    </div>
+</div>
